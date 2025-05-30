@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediCircle</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f9fc; margin: 0; padding: 0; color: #333; }
+    header { background: #004080; color: white; padding: 20px; text-align: center; }
+    section { padding: 20px; }
+    h2 { color: #004080; }
+    .condition { margin-bottom: 30px; }
+    .doctor { cursor: pointer; background: #e3ecf7; padding: 10px; border-radius: 5px; margin-top: 10px; }
+    .videos { display: none; margin-left: 20px; margin-top: 10px; }
+    iframe { width: 100%; max-width: 560px; height: 315px; margin-bottom: 10px; border: none; }
+  </style>
+  <script>
+    function toggleVideos(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>MediCircle</h1>
+    <p>Short, trusted videos from real clinicians to help you understand your care.</p>
+  </header>
+  <section>
+    <div class="condition">
+      <h2>Glaucoma</h2>
+      <div class="doctor" onclick="toggleVideos('kaleem')">Dr. Mona Kaleem</div>
+      <div class="videos" id="kaleem">
+        <iframe src="https://www.youtube.com/embed/placeholder1"></iframe>
+        <iframe src="https://www.youtube.com/embed/placeholder2"></iframe>
+      </div>
+      <div class="doctor" onclick="toggleVideos('ramulu')">Dr. Pradeep Ramulu</div>
+      <div class="videos" id="ramulu">
+        <iframe src="https://www.youtube.com/embed/placeholder3"></iframe>
+        <iframe src="https://www.youtube.com/embed/placeholder4"></iframe>
+      </div>
+      <div class="doctor" onclick="toggleVideos('quigley')">Dr. Harry Quigley</div>
+      <div class="videos" id="quigley">
+        <iframe src="https://www.youtube.com/embed/placeholder5"></iframe>
+        <iframe src="https://www.youtube.com/embed/placeholder6"></iframe>
+      </div>
+    </div>
+    <div class="condition">
+      <h2>Keratoconus</h2>
+      <div class="doctor" onclick="toggleVideos('nguyen')">Dr. Emily Nguyen</div>
+      <div class="videos" id="nguyen">
+        <iframe src="https://www.youtube.com/embed/placeholder7"></iframe>
+        <iframe src="https://www.youtube.com/embed/placeholder8"></iframe>
+      </div>
+      <div class="doctor" onclick="toggleVideos('patel')">Dr. Sarah Patel</div>
+      <div class="videos" id="patel">
+        <iframe src="https://www.youtube.com/embed/placeholder9"></iframe>
+        <iframe src="https://www.youtube.com/embed/placeholder10"></iframe>
+      </div>
+      <div class="doctor" onclick="toggleVideos('hassan')">Dr. Omar Hassan</div>
+      <div class="videos" id="hassan">
+        <iframe src="https://www.youtube.com/embed/placeholder11"></iframe>
+        <iframe src="https://www.youtube.com/embed/placeholder12"></iframe>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
